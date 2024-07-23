@@ -1,9 +1,9 @@
 ### JS_Program
-
-## 1. Remove Duplicate Element From Array
+1. Remove Duplicate Element From Array
 
 ```
 const str = ['a', 'c', 'm', 'a', 'd', 'e', 'c'];
+
 function removeDuplicate(arr){
     let result = [];
     for(let item of arr){
