@@ -120,8 +120,8 @@ Two [ 'a', 'c', 'm', 'a', 'e', 'c' ]
 
 ##### 6. Program to merge and remove duplicate value from an array
 
-```javascript
 ##### Method 1
+```javascript
 function removeDuplicateAfterMerge(firstArr, secondArr){
     const mergedArr = [...firstArr, ...secondArr];
     let result = [...new Set(mergedArr)];
