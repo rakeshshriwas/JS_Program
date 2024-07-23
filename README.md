@@ -1,8 +1,7 @@
 ### JS_Program
 1. Remove Duplicate Element From Array
 
-<pre>
-  <code class="language-javascript">
+```javascript
 const str = ['a', 'c', 'm', 'a', 'd', 'e', 'c'];
 
 function removeDuplicate(arr){
@@ -18,5 +17,4 @@ function removeDuplicateBySet(arr){
     let result = [...new Set(arr)];
     return result;
 }
-</code>
-</pre>
+```
