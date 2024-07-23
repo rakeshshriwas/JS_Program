@@ -82,3 +82,38 @@ console.log(sum === checkNumber ? 'Armstrong' : 'Not a Armstrong')
 
 Output: Armstrong
 ```
+
+##### 4. Remove Specific Item From an Array
+
+```javascript
+const str = ['a', 'c', 'm', 'a', 'd', 'e', 'c'];
+
+function removeSpecificItemFromArrayOne(arr, item){
+    let result = [];
+    
+    arr.forEach((value, index) => {
+        if(value !== item){
+            result.push(value)
+        }
+    })
+    return result;
+}
+
+function removeSpecificItemFromArrayTwo(arr, item){
+    let currentIndex = arr.indexOf(item);
+    
+    if(currentIndex > -1) {
+        arr.splice(currentIndex, 1)
+    }
+    return arr;
+}
+
+
+console.log('One', removeSpecificItemFromArrayOne(str, 'e'));
+console.log('Two', removeSpecificItemFromArrayTwo(str, 'd'));
+
+Output:
+
+One [ 'a', 'c', 'm', 'a', 'd', 'c' ]
+Two [ 'a', 'c', 'm', 'a', 'e', 'c' ]
+```
