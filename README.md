@@ -71,9 +71,10 @@ let sum = 0;
 let checkNumber = 153;
 let temp = checkNumber;
 while(temp > 0){
+    // finding the one's digit
     let reminder = temp % 10;
     sum += reminder * reminder * reminder;
-    console.log(temp)
+    // removing last digit from the number
     temp = parseInt(temp/10);
 }
 
