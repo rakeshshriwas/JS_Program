@@ -19,9 +19,11 @@ function removeDuplicateBySet(arr){
     let result = [...new Set(arr)];
     return result;
 }
+
+Output: [ 'a', 'c', 'm', 'd', 'e' ]
 ```
 
-##### 2. Get Duplicate Element POsition
+##### 2. Get Duplicate Element Position
 
 ```javascript
 const str = ['a', 'c', 'm', 'a', 'd', 'e', 'c'];
@@ -38,6 +40,8 @@ function dublicateStringPosition(arr, ele){
 }
 
 console.log(dublicateStringPosition(str, 'c'));
+
+Output: [ 1, 6 ]
 ```
 
 
@@ -54,7 +58,9 @@ function checkValueExsit(arr, ele){
     }
 }
 
-console.log(checkValueExsit(str, '1'));
+checkValueExsit(str, '1');
+
+Output: Element Added ['a', 'c', 'm','a', 'd', 'e','c', '1']
 ```
 
 
@@ -72,4 +78,6 @@ while(temp > 0){
 }
 
 console.log(sum === checkNumber ? 'Armstrong' : 'Not a Armstrong')
+
+Output: Armstrong
 ```
