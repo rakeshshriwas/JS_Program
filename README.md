@@ -122,7 +122,24 @@ Two [ 'a', 'c', 'm', 'a', 'e', 'c' ]
 
 ```javascript
 ##### Method 1
+function removeDuplicateAfterMerge(firstArr, secondArr){
+    const mergedArr = [...firstArr, ...secondArr];
+    let result = [...new Set(mergedArr)];
+    return result;
+}
 
+const array1 = [1, 2, 3];
+const array2 = [2, 3, 5];
+
+console.log(removeDuplicateAfterMerge(array1, array2))
+console.log(removeDuplicateAfterMerge(array1, array2));
+
+Output: [ 1, 2, 3, 5 ]
+
+```
+
+##### Method 2
+```javascript
 function removeDuplicateAfterMerge(firstArr, secondArr){
     // merge two arrays
     const mergeArray = firstArr.concat(secondArr);
@@ -136,18 +153,6 @@ function removeDuplicateAfterMerge(firstArr, secondArr){
     return result;
 }
 
-##### Method 2
-
-function removeDuplicateAfterMerge(firstArr, secondArr){
-    const mergedArr = [...firstArr, ...secondArr];
-    let result = [...new Set(mergedArr)];
-    return result;
-}
-
-const array1 = [1, 2, 3];
-const array2 = [2, 3, 5];
-
-console.log(removeDuplicateAfterMerge(array1, array2))
 console.log(removeDuplicateAfterMerge(array1, array2));
 
 Output: [ 1, 2, 3, 5 ]
