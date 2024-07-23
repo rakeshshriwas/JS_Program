@@ -83,7 +83,7 @@ console.log(sum === checkNumber ? 'Armstrong' : 'Not a Armstrong')
 Output: Armstrong
 ```
 
-##### 4. Remove Specific Item From an Array
+##### 5. Remove Specific Item From an Array
 
 ```javascript
 const str = ['a', 'c', 'm', 'a', 'd', 'e', 'c'];
@@ -116,4 +116,29 @@ Output:
 
 One [ 'a', 'c', 'm', 'a', 'd', 'c' ]
 Two [ 'a', 'c', 'm', 'a', 'e', 'c' ]
+```
+
+##### 6. Program to merge and remove duplicate value from an array
+
+```javascript
+function removeDuplicateAfterMerge(firstArr, secondArr){
+    // merge two arrays
+    const mergeArray = firstArr.concat(secondArr);
+    let result = [];
+    
+    for(let item of mergeArray){
+        if(result.indexOf(item) === -1){
+            result.push(item);
+        }
+    }
+    return result;
+}
+
+const array1 = [1, 2, 3];
+const array2 = [2, 3, 5];
+
+console.log(removeDuplicateAfterMerge(array1, array2))
+
+Output: [ 1, 2, 3, 5 ]
+
 ```
