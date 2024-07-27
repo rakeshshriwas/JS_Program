@@ -229,7 +229,11 @@ function reverseUsingBuiltInFunction(str){
 }
 
 console.log('Reverse a String Using built-in Methods:', reverseUsingBuiltInFunction('HelloIndore'));
+console.log('Reverse a String each word Using built-in Methods:', reverseUsingBuiltInFunction('Hello Im Rakesh Shriwas From Indore '));
 
-Output: Reverse a String Using built-in Methods: erodnIolleH
+Output:
+Reverse a String Using built-in Methods: erodnIolleH
+Reverse a String each word Using built-in Methods: erodnI morF sawirhS hsekaR mI olleH
+
 
 ```
