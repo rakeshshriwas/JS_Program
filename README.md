@@ -1,6 +1,6 @@
 ### JS_Program
 
-##### 1. Remove Duplicate Element From Array
+### 1. Remove Duplicate Element From Array
 
 ```javascript
 const str = ['a', 'c', 'm', 'a', 'd', 'e', 'c'];
@@ -23,7 +23,7 @@ function removeDuplicateBySet(arr){
 Output: [ 'a', 'c', 'm', 'd', 'e' ]
 ```
 
-##### 2. Get Duplicate Element Position
+### 2. Get Duplicate Element Position
 
 ```javascript
 const str = ['a', 'c', 'm', 'a', 'd', 'e', 'c'];
@@ -45,7 +45,7 @@ Output: [ 1, 6 ]
 ```
 
 
-##### 3. Check and add elemnt
+### 3. Check and add elemnt
 
 ```javascript
 function checkValueExsit(arr, ele){
@@ -64,7 +64,7 @@ Output: Element Added ['a', 'c', 'm','a', 'd', 'e','c', '1']
 ```
 
 
-##### 4. Check Armstrong Number of 3 digit
+### 4. Check Armstrong Number of 3 digit
 
 ```javascript
 let sum = 0;
@@ -83,7 +83,7 @@ console.log(sum === checkNumber ? 'Armstrong' : 'Not a Armstrong')
 Output: Armstrong
 ```
 
-##### 5. Remove Specific Item From an Array
+### 5. Remove Specific Item From an Array
 
 ```javascript
 const str = ['a', 'c', 'm', 'a', 'd', 'e', 'c'];
@@ -118,7 +118,7 @@ One [ 'a', 'c', 'm', 'a', 'd', 'c' ]
 Two [ 'a', 'c', 'm', 'a', 'e', 'c' ]
 ```
 
-##### 6. Program to merge and remove duplicate value from an array
+### 6. Program to merge and remove duplicate value from an array
 
 ##### Method 1 [Using Spread Syntax and Set]
 ```javascript
@@ -159,7 +159,7 @@ Output: [ 1, 2, 3, 5 ]
 
 ```
 
-##### Check Prime Number
+### 7. Check Prime Number
 ```javascript
 
 let number = 6;
@@ -193,7 +193,7 @@ Output: Number is Prime Number
 ```
 
 
-##### Reverse a String  
+### 8. Reverse a String  
 
 ##### Method 01 [Using for Loop] 
 
@@ -236,7 +236,9 @@ Reverse a String Using built-in Methods: erodnIolleH
 Reverse a String each word Using built-in Methods: erodnI morF sawirhS hsekaR mI olleH
 
 ```
-#### Find Factorial
+### 9. Find Factorial
+
+#### Method 1 [Using Loop]
 
 ```javascript
 function factorial(number){
@@ -261,3 +263,19 @@ function factorial(number){
 factorial(5);
 Output: The factorial of 5 is 120.
 ```
+
+#### Method 2 [Using Recursion]
+
+```javascript
+function factOne(num){
+    if(num === 0){
+        return 1;
+    } else {
+        return num * factOne(num - 1);
+    }
+}
+
+console.log(`The factorial one of 5 is`, factOne(5));
+Output: The factorial one of 5 is 120
+```
+
