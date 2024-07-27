@@ -191,3 +191,45 @@ if(isPrime){
 Output: Number is Prime Number
 
 ```
+
+
+##### Reverse a String  
+
+##### Method 01 [Using for Loop] 
+
+```javascript
+
+function reverseString(str){
+    let reverseStringResult = '';
+    for(i = str.length - 1; i >= 0; i-- ){
+        reverseStringResult += str[i]
+    }
+    return reverseStringResult;
+}
+
+console.log('Reverse a String Using for Loop:', reverseString('Hello'));
+
+Output: Reverse a String Using for Loop: olleH
+
+```
+
+##### Method 02 [Using built-in Methods]
+
+```javascript
+function reverseUsingBuiltInFunction(str){
+    
+    // return a new array of strings
+    let arrayString = str.split('');
+    // reverse the new created array elements
+    let reverseString = arrayString.reverse();
+    // join all elements of the array into a string
+    let resultStr = reverseString.join('')
+    
+    return resultStr;
+}
+
+console.log('Reverse a String Using built-in Methods:', reverseUsingBuiltInFunction('HelloIndore'));
+
+Output: Reverse a String Using built-in Methods: erodnIolleH
+
+```
