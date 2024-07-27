@@ -273,7 +273,7 @@ function factRecursion(num){
     if(num === 0){
         return 1;
     } else {
-        return num * factOne(num - 1);
+        return num * factRecursion(num - 1);
     }
 }
 
