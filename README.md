@@ -267,7 +267,9 @@ Output: The factorial of 5 is 120.
 #### Method 2 [Using Recursion]
 
 ```javascript
-function factOne(num){
+let number = 5;
+
+function factRecursion(num){
     if(num === 0){
         return 1;
     } else {
@@ -275,7 +277,13 @@ function factOne(num){
     }
 }
 
-console.log(`The factorial one of 5 is`, factOne(5));
+if (number >= 0) {
+    console.log(`The factorial of ${number} using recursion is`, factRecursion(number));
+}
+else {
+    console.log('Enter a positive number.');
+}
+
 Output: The factorial one of 5 is 120
 ```
 
