@@ -163,33 +163,37 @@ Output: [ 1, 2, 3, 5 ]
 ```javascript
 
 let number = 6;
-let isPrime = false;
+let isPrime = true;
 
-function checkPrimeNumber(num){
-    // check if number is equal to 1
-    if(num === 1){
-        console.log("1 is neither prime nor composite number.");
-    }else if(num > 1){
-        for(i = 2; i < num; i++){
-            if(num % i === 0){
-                isPrime = true;
-            }
+// check if number is equal to 1
+if (number === 1) {
+    console.log("1 is neither prime nor composite number.");
+}
+
+// check if number is greater than 1
+else if (number > 1) {
+
+    // looping through 2 to number-1
+    for (let i = 2; i < number; i++) {
+        if (number % i == 0) {
+            isPrime = false;
+            break;
         }
+    }
+
+    if (isPrime) {
+        console.log(`${number} is a prime number`);
     } else {
-        console.log("The number is not a prime number.");
+        console.log(`${number} is a not prime number`);
     }
 }
 
-checkPrimeNumber(number);
-
-if(isPrime){
-    console.log('Number is Prime Number');
-}else{
-    console.log('Number is not Prime Number');
+// check if number is less than 1
+else {
+    console.log("The number is not a prime number.");
 }
 
-Output: Number is Prime Number
-
+Output: 6 is a not prime number
 ```
 
 
