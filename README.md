@@ -3,44 +3,59 @@
 ### 1. Remove Duplicate Element From Array
 
 ```javascript
-const str = ['a', 'c', 'm', 'a', 'd', 'e', 'c'];
+const fruits = [ 'Apple', 'Banana', 'Mango', 'Apple', 'Banan'];
 
-[Method: 01]
-function removeDuplicate(arr){
+function methodOne(arr){
     let result = [];
-    for(let item of arr){
-        if(result.indexOf(item) === -1){
-            result.push(item)
+    for(let fr of arr){
+        if(result.indexOf(fr) === -1){
+            result.push(fr)
         }
     }
     return result;
 }
 
-[Method: 02]
-function removeDuplicateBySet(arr){
-    let result = [...new Set(arr)];
+console.log('Method One ::', methodOne(fruits));
+
+function methodTwo(arr){
+    return [...new Set(arr)];
+}
+
+console.log('Method Two ::', methodTwo(fruits));
+
+function methodThird(arr){
+    let result = [];
+    arr.forEach((name, index) => {
+       if(!result.includes(name)){
+           result.push(name);
+       } 
+    });
+    
     return result;
 }
 
-[Method: 03]
-const incResult = [];
-str.forEach((name) => {
-    if(!incResult.includes(name)){
-        incResult.push(name)
-    }
-});
+console.log('Method Third ::', methodThird(fruits));
 
-[Method: 04]
-let result = names.reduce((acc, curr) => {
-    console.log(acc, curr);
-    return acc.includes(curr) ? acc : [...acc, curr];
-}, []);
+function methodFour(arr){
+    return  arr.reduce((acc, curr) => {
+        return acc.includes(curr) ? acc : [...acc, curr]
+    },[]);
+}
 
-[Method: 05]
-const result = str.filter((ele, index) => str.indexOf(ele) === index);
+console.log('Method Four ::', methodFour(fruits));
 
+function methodFive(arr){
+    return arr.filter((name, index) => arr.indexOf(name) === index);
+}
 
-Output: [ 'a', 'c', 'm', 'd', 'e' ]
+console.log('Method Five ::', methodFive(fruits));
+
+Output:
+Method One :: [ 'Apple', 'Banana', 'Mango', 'Banan' ]
+Method Two :: [ 'Apple', 'Banana', 'Mango', 'Banan' ]
+Method Third :: [ 'Apple', 'Banana', 'Mango', 'Banan' ]
+Method Four :: [ 'Apple', 'Banana', 'Mango', 'Banan' ]
+Method Five :: [ 'Apple', 'Banana', 'Mango', 'Banan' ]
 ```
 
 ### 2. Get Duplicate Element Position
