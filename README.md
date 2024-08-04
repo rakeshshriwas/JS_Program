@@ -5,7 +5,7 @@
 ```javascript
 const str = ['a', 'c', 'm', 'a', 'd', 'e', 'c'];
 
-#Method: 01
+[Method: 01]
 function removeDuplicate(arr){
     let result = [];
     for(let item of arr){
@@ -16,11 +16,13 @@ function removeDuplicate(arr){
     return result;
 }
 
+[Method: 02]
 function removeDuplicateBySet(arr){
     let result = [...new Set(arr)];
     return result;
 }
 
+[Method: 03]
 const incResult = [];
 str.forEach((name) => {
     if(!incResult.includes(name)){
@@ -28,11 +30,13 @@ str.forEach((name) => {
     }
 });
 
+[Method: 04]
 let result = names.reduce((acc, curr) => {
     console.log(acc, curr);
     return acc.includes(curr) ? acc : [...acc, curr];
 }, []);
 
+[Method: 05]
 const result = str.filter((ele, index) => str.indexOf(ele) === index);
 
 
