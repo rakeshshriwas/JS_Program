@@ -5,6 +5,7 @@
 ```javascript
 const str = ['a', 'c', 'm', 'a', 'd', 'e', 'c'];
 
+#Method: 01
 function removeDuplicate(arr){
     let result = [];
     for(let item of arr){
@@ -26,6 +27,11 @@ str.forEach((name) => {
         incResult.push(name)
     }
 });
+
+let result = names.reduce((acc, curr) => {
+    console.log(acc, curr);
+    return acc.includes(curr) ? acc : [...acc, curr];
+}, []);
 
 const result = str.filter((ele, index) => str.indexOf(ele) === index);
 
