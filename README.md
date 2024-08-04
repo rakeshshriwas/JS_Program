@@ -20,6 +20,13 @@ function removeDuplicateBySet(arr){
     return result;
 }
 
+const incResult = [];
+str.forEach((name) => {
+    if(!incResult.includes(name)){
+        incResult.push(name)
+    }
+});
+
 const result = str.filter((ele, index) => str.indexOf(ele) === index);
 
 
