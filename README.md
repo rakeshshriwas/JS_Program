@@ -20,6 +20,9 @@ function removeDuplicateBySet(arr){
     return result;
 }
 
+const result = str.filter((ele, index) => str.indexOf(ele) === index);
+
+
 Output: [ 'a', 'c', 'm', 'd', 'e' ]
 ```
 
