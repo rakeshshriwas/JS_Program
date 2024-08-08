@@ -391,3 +391,17 @@ console.log('result', result);
 
 ```
 
+### 10. Reverse each word in a sentance
+```javascript
+const str = "Jai Shree Ram Bhaiyo Kaise Hai Aap Log";
+
+result = str.split(" ").map((item) => {
+    return item.split("").reverse().join("");
+});
+
+console.log('Result:', result.join());
+
+Output: Result: iaJ,eerhS,maR,oyiahB,esiaK,iaH,paA,goL
+
+```
+
