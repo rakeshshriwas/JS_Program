@@ -405,3 +405,21 @@ Output: Result: iaJ,eerhS,maR,oyiahB,esiaK,iaH,paA,goL
 
 ```
 
+### 11 Reverse a number
+```javascript
+function reverseNumber(num){
+    let reverseNum = 0;
+    
+    while(num > 0){
+        let lastNumber = num % 10;
+        reverseNum = reverseNum * 10 + lastNumber;
+        num = parseInt(num/10);
+    }
+    
+    return reverseNum;
+}
+
+console.log(reverseNumber(12345));
+Output: 54321
+```
+
