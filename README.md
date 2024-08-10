@@ -411,8 +411,10 @@ function reverseNumber(num){
     let reverseNum = 0;
     
     while(num > 0){
+        // finding the one's digit
         let lastNumber = num % 10;
         reverseNum = reverseNum * 10 + lastNumber;
+        // removing last digit from the number
         num = parseInt(num/10);
     }
     
