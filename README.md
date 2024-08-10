@@ -500,3 +500,25 @@ console.log(Capitalize('hello indore'))
 
 Output: Hello Indore
 ```
+
+### 15. Find the number of occurrences in each letter of a string
+
+```javascript
+function getOccurance(str){
+    let obj = {};
+    str.split('').forEach((char) => {
+        if(!obj.hasOwnProperty(char)){
+            obj[char] = 1;
+        }else {
+            obj[char]++;
+        }
+    });
+    
+    return obj;
+}
+
+console.log('Occurance', getOccurance('madam'));
+
+Output: Occurance { m: 2, a: 2, d: 1 }
+
+```
