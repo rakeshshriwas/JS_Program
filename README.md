@@ -489,3 +489,14 @@ console.log('Sorted Word : ', sortWordInAlphOrder('apple'));
 Output: Sorted Word :  aelpp
 ```
 
+### 14. Capitalize string every word first letter capitalize
+```javascript
+
+function Capitalize(str){
+    return str.split(" ").map((word) => word.charAt(0).toUpperCase() + word.substring(1)).join(" ");
+}
+
+console.log(Capitalize('hello indore'))
+
+Output: Hello Indore
+```
