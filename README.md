@@ -425,8 +425,11 @@ console.log(reverseNumber(12345));
 Output: 54321
 ```
 
-### 12 String is Palindrome or Not
+### 12. String is Palindrome or Not
+
+#### Method 1 [Create a custom logic]
 ```javascript
+
 function checkPalindrome(string) {
 
     // find the length of a string
@@ -446,5 +449,39 @@ function checkPalindrome(string) {
 console.log(checkPalindrome('madam'));
 
 Output: It is a palindrome
+```
+
+#### Method 2 [Builtin Function]
+
+```javascript
+
+function checkPalindrome(string) {
+    
+    let tempString = string.split('').reverse().join('');
+    
+    if(string === tempString){
+        console.log('It is a palindrome');
+    }else{
+        console.log('It is not a palindrome');
+    }
+}
+
+// call the function
+checkPalindrome('madam')
+
+Output: It is a palindrome
+```
+
+
+### 13. Sort Words in Alphabetical Order
+```javascript
+
+function sortWordInAlphOrder(word){
+    return word.split('').sort().join('');
+}
+
+console.log('Sorted Word : ', sortWordInAlphOrder('apple'));
+
+Output: Sorted Word :  aelpp
 ```
 
