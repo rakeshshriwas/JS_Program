@@ -405,7 +405,7 @@ Output: Result: iaJ,eerhS,maR,oyiahB,esiaK,iaH,paA,goL
 
 ```
 
-### 11 Reverse a number
+### 11. Reverse a number
 ```javascript
 function reverseNumber(num){
     let reverseNum = 0;
@@ -419,6 +419,10 @@ function reverseNumber(num){
     }
     
     return reverseNum;
+}
+// Second Method
+function reverseNumber(number){
+    return number.toString().split("").reverse().join('');
 }
 
 console.log(reverseNumber(12345));
