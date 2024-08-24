@@ -522,3 +522,29 @@ console.log('Occurance', getOccurance('madam'));
 Output: Occurance { m: 2, a: 2, d: 1 }
 
 ```
+
+### 16. Find the second largest number in an unsorted array without any built-in method in JavaScript
+
+```javascript
+let array = [10, 30, 35, 20, 30, 25, 90, 89];
+
+function secondLargestNumber(array) {
+    let max = 0;
+    let secondMax = 0;
+
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] > max) {
+            max = array[i];
+        }
+    }
+
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] > secondMax && array[i] !== max) {
+            secondMax = array[i];
+        }
+    }
+    return secondMax;
+}
+console.log(secondLargestNumber(array));
+
+```
