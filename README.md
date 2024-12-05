@@ -586,3 +586,57 @@ const obj2 = {name: 'Ramesh', age: 40}
 console.log(secondLargestNumber(array));
 
 ```
+
+### 18. Modify Obj
+
+```javascript
+const endorsements = [
+  { skill: 'javascript', user: 'Chad' },
+  { skill: 'javascript', user: 'Bill' },
+  { skill: 'javascript', user: 'Sue' },
+  { skill: 'html', user: 'Sue HTML' },
+  { skill: 'css', user: 'Sue CSS' },
+  { skill: 'css', user: 'Bill CSS' }
+];
+
+// Transform endorsements to desired output
+const resultData = Object.values(
+  endorsements.reduce((acc, { skill, user }) => {
+      console.log(acc[skill]);
+    if (!acc[skill]) {
+      acc[skill] = { skill, user: [], count: 0 };
+    }
+    acc[skill].user.push(user);
+    acc[skill].count++;
+    return acc;
+  }, {})
+);
+
+console.log(resultData);
+
+Output:
+[
+  { skill: 'javascript', user: [ 'Chad', 'Bill', 'Sue' ], count: 3 },
+  { skill: 'html', user: [ 'Sue HTML' ], count: 1 },
+  { skill: 'css', user: [ 'Sue CSS', 'Bill CSS' ], count: 2 }
+]
+
+```
+
+### 19. Compaire two obj and find dublicate
+
+```javascript
+let a = [1,2,3,4,5,6,7,8];
+let b = [4,5,6,7];
+let result = [];
+b.forEach((item) => {
+    if(a.includes(item)){
+        result.push(item)
+    }
+});
+
+console.log(result)
+
+Output: [ 4, 5, 6, 7 ]
+
+```
