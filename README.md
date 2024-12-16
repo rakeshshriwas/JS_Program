@@ -658,8 +658,12 @@ var sum = function(a, b, c) {
     return this.num + a + b + c;
 };
 
+// The call method allows you to explicitly specify what this refers to when calling the function.
 console.log(sum.call(obj, 1, 2, 3)); // Output: 9
+
+// The apply method is similar to call, but it takes an array of arguments instead of individual arguments.
 console.log(sum.apply(obj, [1, 2, 3])); // Output: 9
+
 var boundSum = sum.bind(obj);
 console.log(boundSum(1, 2, 3)); // Output: 9
 
