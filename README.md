@@ -651,7 +651,7 @@ var sum = function(a,b,c) {
 }
 console.log(sum(1,2,3))
 
-// Soluation
+// Soluation 1
 var obj = { num: 3 };
 
 var sum = function(a, b, c) {
@@ -666,6 +666,20 @@ console.log(sum.apply(obj, [1, 2, 3])); // Output: 9
 
 var boundSum = sum.bind(obj);
 console.log(boundSum(1, 2, 3)); // Output: 9
+
+// Soluation 2
+
+const countMap = new Map();
+array.forEach(item => {
+    countMap.set(item, (countMap.get(item) || 0) + 1);
+});
+console.log(countMap)
+// Filter only the elements that appear more than once
+const duplicates = [...countMap.entries()]
+    .filter(([key, value]) => value > 1)
+    .map(([key]) => key);
+
+console.log(duplicates); // Output: [6, 2]
 
 ```
 
