@@ -640,3 +640,25 @@ console.log(result)
 Output: [ 4, 5, 6, 7 ]
 
 ```
+###. Problems 1
+
+```javascript
+// Problem 
+var obj = { num: 3 };
+
+var sum = function(a,b,c) {
+     return this.num+a+b+c;
+}
+console.log(sum(1,2,3))
+
+// Soluation
+var obj = { num: 3 };
+
+var sum = function(a, b, c) {
+    return this.num + a + b + c;
+};
+
+console.log(sum.call(obj, 1, 2, 3)); // Output: 9
+```
+
+
