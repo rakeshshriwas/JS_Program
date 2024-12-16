@@ -659,6 +659,10 @@ var sum = function(a, b, c) {
 };
 
 console.log(sum.call(obj, 1, 2, 3)); // Output: 9
+console.log(sum.apply(obj, [1, 2, 3])); // Output: 9
+var boundSum = sum.bind(obj);
+console.log(boundSum(1, 2, 3)); // Output: 9
+
 ```
 
 
