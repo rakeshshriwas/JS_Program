@@ -277,6 +277,14 @@ Reverse a String Using built-in Methods: erodnIolleH
 Reverse a String each word Using built-in Methods: erodnI morF sawirhS hsekaR mI olleH
 
 ```
+##### Method 02 [Using reduce Methods]
+
+```javascript
+let str = "hello";
+let reversed = str.split('').reduce((rev, char) => char + rev, '');
+console.log(reversed); // "olleh"
+```
+
 ### 9. Find Factorial
 ###### The factorial of a number is the multiplication of all the numbers between 1 and the number itself.
 
