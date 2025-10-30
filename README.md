@@ -277,7 +277,7 @@ Reverse a String Using built-in Methods: erodnIolleH
 Reverse a String each word Using built-in Methods: erodnI morF sawirhS hsekaR mI olleH
 
 ```
-##### Method 02 [Using reduce Methods]
+##### Method 03 [Using reduce Methods]
 
 ```javascript
 let str = "hello";
