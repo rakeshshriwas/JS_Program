@@ -680,7 +680,36 @@ const duplicates = [...countMap.entries()]
     .map(([key]) => key);
 
 console.log(duplicates); // Output: [6, 2]
+```
 
+### 20. Print numbers from 1 to 10 at a 1-second interval using JavaScript.
+
+```javascript
+ // Soluation First
+
+let num = 1;
+
+const intervalId = setInterval(() => {
+  console.log(num);
+  num++;
+
+  if (num > 10) {
+    clearInterval(intervalId); // stop when 10 is reached
+  }
+}, 1000);
+
+// Soluation Second
+
+function printNumber(number){
+    if( number > 10) return;
+        console.log(number);
+
+    setTimeout(() => printNumber(number+1), 1000)
+}
+
+printNumber(1);
+
+// Output for both soluation: 1,2,3,4,5,6,7,8,9,10  
 ```
 
 
