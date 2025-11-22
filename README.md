@@ -50,12 +50,22 @@ function methodFive(arr){
 
 console.log('Method Five ::', methodFive(fruits));
 
+const uniqueFruits = fruits.reduce((accVal, curVal) => {
+    if(accVal.indexOf(curVal) === -1){
+        accVal.push(curVal)
+    }
+    return accVal
+},[]);
+
+console.log('Method Six ::', uniqueFruits);
+
 Output:
 Method One :: [ 'Apple', 'Banana', 'Mango', 'Banan' ]
 Method Two :: [ 'Apple', 'Banana', 'Mango', 'Banan' ]
 Method Third :: [ 'Apple', 'Banana', 'Mango', 'Banan' ]
 Method Four :: [ 'Apple', 'Banana', 'Mango', 'Banan' ]
 Method Five :: [ 'Apple', 'Banana', 'Mango', 'Banan' ]
+Method Six :: [ 'Apple', 'Banana', 'Mango', 'Banan' ]
 ```
 
 ### 2. Get Duplicate Element Position
