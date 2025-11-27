@@ -787,6 +787,16 @@ const newProducts = Object.values(
     return acc;
   }, {})
 );
+// Soluation 2
+const map = new Map();
+
+for (const item of products) {
+  if (!map.has(item.name) || item.price < map.get(item.name).price) {
+    map.set(item.name, item);
+  }
+}
+
+const newProducts = [...map.values()];
 
 console.log(newProducts);
 
