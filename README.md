@@ -756,7 +756,7 @@ function groupBy(objectArray, property) {
 let groupedPeople = groupBy(people, "age");
 console.log(groupedPeople);
 
-// Output for both soluation:
+// Output:
 {
   '19': [ { name: 'Dwight', age: 19 } ],
   '21': [ { name: 'John', age: 21 }, { name: 'Oscar', age: 21 } ],
@@ -766,5 +766,36 @@ console.log(groupedPeople);
     { name: 'Kevin', age: 55 }
   ]
 } 
+```
+
+### 22. Group products by name, then pick the item with the lowest price for each name.
+
+```javascript
+const products = [
+  { name: "Laptop", vendor: "A", price: 800 },
+  { name: "Monitor", vendor: "B", price: 300 },
+  { name: "Laptop", vendor: "C", price: 750 },
+  { name: "Keyboard", vendor: "A", price: 50 },
+  { name: "Monitor", vendor: "A", price: 280 },
+];
+
+const newProducts = Object.values(
+  products.reduce((acc, item) => {
+    if (!acc[item.name] || item.price < acc[item.name].price) {
+      acc[item.name] = item;
+    }
+    return acc;
+  }, {})
+);
+
+console.log(newProducts);
+
+// Output:
+[
+  { name: 'Laptop', vendor: 'C', price: 750 },
+  { name: 'Monitor', vendor: 'A', price: 280 },
+  { name: 'Keyboard', vendor: 'A', price: 50 }
+]
+
 ```
 
