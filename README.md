@@ -797,3 +797,32 @@ console.log(newProducts);
 
 ```
 
+### 23. Group products by name, then pick the item with the lowest price for each name.
+
+```javascript
+let arr = [1,2,[3,4], 5, [6,7, [8]], 9];
+
+function flatten(array) {
+    let output = [];
+    
+    for(let item of array) {
+        if(Array.isArray(item)) {
+            output.push(...flatten(item));
+        } else {
+            output.push(item)
+        }
+    }
+    return output;
+}
+
+
+console.log(flatten(arr));
+
+// Output:
+[
+  1, 2, 3, 4, 5,
+  6, 7, 8, 9
+]
+
+```
+
