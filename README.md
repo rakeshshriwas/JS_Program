@@ -797,8 +797,7 @@ console.log(newProducts);
 
 ```
 
-### 23. Group products by name, then pick the item with the lowest price for each name.
-
+### 23. Flatten it
 ```javascript
 let arr = [1,2,[3,4], 5, [6,7, [8]], 9];
 
