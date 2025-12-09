@@ -586,22 +586,10 @@ function compareObj(obj1, obj2) {
     return true
 }
 
-
-
 const obj1 = {name: 'Ramesh', age: 20};
 const obj2 = {name: 'Ramesh', age: 40}
 
- console.log(compareObj(obj1, obj2));
-    }
-
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] > secondMax && array[i] !== max) {
-            secondMax = array[i];
-        }
-    }
-    return secondMax;
-}
-console.log(secondLargestNumber(array));
+console.log(compareObj(obj1, obj2));
 
 ```
 
