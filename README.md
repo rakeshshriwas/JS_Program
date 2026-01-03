@@ -570,7 +570,7 @@ console.log(secondLargestNumber(array));
 
 ```
 
-### 17. Compaire two object
+### 17. Compaire two object and nested object
 
 ```javascript
 function compareObj(obj1, obj2) {
@@ -590,6 +590,56 @@ const obj1 = {name: 'Ramesh', age: 20};
 const obj2 = {name: 'Ramesh', age: 40}
 
 console.log(compareObj(obj1, obj2));
+
+// Second Problem
+
+function deepEqual(obj1, obj2) {
+    // Same reference
+    if (obj1 === obj2) return true;
+
+    // Check if both are objects
+    if (
+        typeof obj1 !== "object" || obj1 === null ||
+        typeof obj2 !== "object" || obj2 === null
+    ) {
+        return false;
+    }
+
+    // Compare keys length
+    const keys1 = Object.keys(obj1);
+    const keys2 = Object.keys(obj2);
+
+    if (keys1.length !== keys2.length) return false;
+
+    // Compare each key recursively
+    for (let key of keys1) {
+        if (!keys2.includes(key)) return false;
+
+        if (!deepEqual(obj1[key], obj2[key])) return false;
+    }
+
+    return true;
+}
+
+const obj1 = {
+    name: "John",
+    address: {
+        city: "NY",
+        zip: 10001
+    }
+};
+
+const obj2 = {
+    name: "John",
+    address: {
+        city: "NY",
+        zip: 10001
+    }
+};
+
+console.log(deepEqual(obj1, obj2));
+
+// output :: true
 
 ```
 
