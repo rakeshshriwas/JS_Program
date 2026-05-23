@@ -522,6 +522,19 @@ console.log(Capitalize('hello indore'))
 Output: Hello Indore
 ```
 
+### Convert a string into given formate TESTING_TESTING_TEST -> testing Testing Test
+
+```javascript
+function strConversion(str){
+    return  str.toLowerCase().split("_").map((item, index) => {
+     if (index === 0) return item;
+      return item.charAt(0).toUpperCase()  + item.slice(1);
+    }).join(" ");
+}
+
+console.log(strConversion('TESTING_TESTING_TEST'));//testing Testing Test
+```
+
 ### 15. Find the number of occurrences in each letter of a string
 
 ```javascript
